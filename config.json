@@ -1,0 +1,148 @@
+{
+  "version": 1.0,
+  "title": "Assignment 2: Memory Table and Debugging",
+  "quiz": [
+    {
+      "question": "You can change an existing variable's name.",
+      "options": [
+        {
+          "value": "True",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "False",
+          "answer": true,
+          "explanation": "Correct! Once a variable is declared the only thing that can change is its value. Its name cannot be changed."
+        }
+      ]
+    },
+    {
+      "question": "In the following line of code, what is the type of the variable declared?\n```cpp\nchar value = 'd';\n```",
+      "options": [
+        {
+          "value": "char",
+          "answer": true,
+          "explanation": "Correct! The type of the variable is `char`. The type of the variable will always come before its name in C++."
+        },
+        {
+          "value": "int",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "value",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "string",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "'d'",
+          "answer": false,
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "question": "In the following line of code, what is the name of the variable declared?\n```cpp\nfloat int_example = 4.3;\n```",
+      "options": [
+        {
+          "value": "`float`",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "`example`",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "`int_example`",
+          "answer": true,
+          "explanation": "Correct! The variable name is `int_example`. The name of a variable will always follow its type."
+        },
+        {
+          "value": "4.3",
+          "answer": false,
+          "explanation": "Not quite, this is the *value* of the variable."
+        }
+      ]
+    },
+    {
+      "question": "For the following code segment, which row of the following memory table has an error?\n\n```cpp\n#include <iostream>\n#include <string>\n\nusing namespace std;\n\nint main() {\n  int num_cats = 12;\n  int daily_food_per_cat = 2;\n  int total_food_per_day = num_cats * daily_food_per_cat;\n  cout << \"Food per day: \";\n  cout << total_food_per_day;\n}\n```\n\nRow | Type | Name | Value\n--- | --- | --- | ---\n1   | int | num_cats | 12\n2   | int | daily_food_per_cat | 2\n3   | int | total_food_per_day | 14",
+      "options": [
+        {
+          "value": "Row 1",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "Row 2",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "value": "Row 3",
+          "answer": true,
+          "explanation": "Correct! The value of `total_food_per_day` is incorrect. It should be the product of `num_cats` and `daily_food_per_cat` which would be `2 * 12` or `24`."
+        }
+      ]
+    }
+  ],
+  "fix_code": [
+    {
+      "question": "This code isn't compiling correctly! Can you help fix it? Be sure to also address any formatting errors.",
+      "hints": [
+        {
+          "line_number": 9,
+          "hint": "Variables cannot have the same name even if they have different types."
+        },
+        {
+          "line_number": 10,
+          "hint": "Always make sure that you are using the correct variables. If your variable names are off by as much as one letter it will cause your program to fail."
+        }
+      ]
+    },
+    {
+      "question": "This code isn't compiling correctly! Can you help fix it? Be sure to also address any formatting errors.",
+      "hints": [
+        {
+          "line_number": 8,
+          "hint": "Always check to make sure the variable you are assigning a value to has a compatible type."
+        }
+      ]
+    },
+    {
+      "question": "This code isn't compiling correctly! Can you help fix it? Be sure to also address any formatting errors.",
+      "hints": [
+        {
+          "line_number": 12,
+          "hint": "It only takes a single incorrect letter to cause your program to fail."
+        }
+      ]
+    },
+    {
+      "question": "This code isn't running correctly! Can you help fix it? Be sure to also address any formatting or syntax errors.",
+      "hints": [
+        {
+          "line_number": 14,
+          "hint": "Make sure you're using the right mathematical operators at the right time."
+        }
+      ]
+    }
+  ],
+  "invent_code": [
+    {
+      "question": "For the following code, segment write out the memory table for each segment of code.",
+      "hints": []
+    },
+    {
+      "question": "For this exercise, you are going to write a program and while doing that make a memory table for it. The program should be constructed such that each line can be described by:\n\n1. Declare an `int` variable named `original`.\n2. Declare a `float` variable named `original_float`.\n3. Assign the value thirteen and a half to the variable `original_float`.\n4. Print to the terminal the following message: `\"Please enter an integer: \"`.\n5. Read in a value and assign it to the variable `original`.\n6. Declare a new `int` variable named `clone` and set its value to be fourteen greater than `original`.\n7. Declare a new `int` variable named `product` and set its value to be equal to the product of `original` and `clone`.\n8. Print the following message `\"The product is: (value of product here)\"`",
+      "hints": []
+    }
+  ]
+}
